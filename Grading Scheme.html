@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">DNS Quiz</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>DNS Quiz</h1>
+    <p>Take a test to see what you learned.</p>
+</section>
+
+<!-- Quiz -->
+<section class="section">
+    <div class="container">
+        <h2>Self‑Assessment Quiz</h2>
+
+        <form id="dnsQuiz" class="lookup-tool">
+
+            <!-- Q1: Fill in the Blank -->
+            <div class="quiz-question">
+                <h3>1. Fill in the blank</h3>
+                <p><strong>The DNS record type that maps a domain to an IPv4 address is the ______ record.</strong></p>
+                <input type="text" id="q1" class="lookup-input">
+            </div>
+
+            <!-- Q2: Multiple Choice -->
+            <div class="quiz-question">
+                <h3>2. Multiple Choice</h3>
+                <p>Which protocol does DNS primarily use?</p>
+
+                <label><input type="radio" name="q2" value="http"> HTTP</label><br>
+                <label><input type="radio" name="q2" value="udp"> UDP</label><br>
+                <label><input type="radio" name="q2" value="ftp"> FTP</label><br>
+            </div>
+
+            <!-- Q3: Multiple Choice -->
+            <div class="quiz-question">
+                <h3>3. Multiple Choice</h3>
+                <p>What port does DNS typically use?</p>
+
+                <label><input type="radio" name="q3" value="25"> 25</label><br>
+                <label><input type="radio" name="q3" value="53"> 53</label><br>
+                <label><input type="radio" name="q3" value="443"> 443</label><br>
+            </div>
+
+            <!-- Q4: Multiple Choice -->
+            <div class="quiz-question">
+                <h3>4. Multiple Choice</h3>
+                <p>Which DNS record stores mail server information?</p>
+
+                <label><input type="radio" name="q4" value="mx"> MX</label><br>
+                <label><input type="radio" name="q4" value="cname"> CNAME</label><br>
+                <label><input type="radio" name="q4" value="txt"> TXT</label><br>
+            </div>
+
+            <!-- Q5: Select all that apply -->
+            <div class="quiz-question">
+                <h3>5. Multi‑Select</h3>
+                <p>Which of the following are valid DNS record types? (Select all that apply)</p>
+
+                <label><input type="checkbox" name="q5" value="a"> A</label><br>
+                <label><input type="checkbox" name="q5" value="aaaa"> AAAA</label><br>
+                <label><input type="checkbox" name="q5" value="xyz"> XYZ</label><br>
+                <label><input type="checkbox" name="q5" value="cname"> CNAME</label><br>
+            </div>
+
+            <button type="button" class="lookup-button" onclick="gradeQuiz()">Submit Quiz</button>
+            <button type="button" class="lookup-button" style="margin-top:10px; background:#555;" onclick="resetQuiz()">Reset Quiz</button>
+
+            <div id="quizResult" class="lookup-result"></div>
+
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 DNS Explorer. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
